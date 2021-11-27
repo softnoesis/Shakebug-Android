@@ -21,9 +21,9 @@ In your `Application class` or `Launching activity` add this line to your `onCre
 
 **Java**
 ```java
-new ShakeBugInitialize(this,"APP_TOKEN");
+new ShakeBugInitialize(this,"<Your Key>");
 ```
 **Kotlin**
 ```kotlin
-ShakeBugInitialize(this,"APP_TOKEN")
+ShakeBugInitialize(this,"<Your Key>")
 ```
