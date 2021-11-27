@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LaunchingActivity">
 
     <ImageView
         android:id="@+id/iv_shake_bug"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/splash_screen" />
+        android:src="@drawable/shake_bug_splash_screen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
