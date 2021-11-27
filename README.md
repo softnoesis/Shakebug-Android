@@ -13,7 +13,7 @@ implementation 'com.softnoesis.shakebug:ShakeBug:<latest-version>'
 
 ## Usage
 
-In your `Application` class add this line to your `onCreate` method.
+In your `Application class` or `Launching activity` add this line to your `onCreate` method.
 
 **Java**
 ```java
