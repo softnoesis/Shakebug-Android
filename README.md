@@ -59,7 +59,7 @@ ShakeBug.getInstance().showTutorialScreenFirstTime(true) // Default value True
 
 ## Usage
 
-Build & run your app. Once your app is running, shake your device (\^⌘Z in the simulator) to report a bug! Bug/Crash reports are sent directly to login panel of Shakebug.com and also notify on your registered email address.
+Build & run your app. Once your app is running, shake your device to report a bug! Bug/Crash reports are sent directly to login panel of Shakebug.com and also notify on your registered email address.
 
 
 ## Contact
