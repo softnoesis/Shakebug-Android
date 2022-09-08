@@ -21,11 +21,11 @@ In your `Application class` or `Launching activity` add this line to your `onCre
 
 **Java**
 ```java
-ShakeBug.initialize(this, "<Your Key>");
+ShakeBugInitialize(this, "<Your Key>");
 ```
 **Kotlin**
 ```kotlin
-ShakeBug.initialize(this,"<Your Key>")
+ShakeBugInitialize(this,"<Your Key>")
 ```
     
 Be sure to replace `<Your Key>` with your application key which given by ShakeBug website.
