@@ -12,7 +12,7 @@ Sign up for a service at https://www.shakebug.com
 Add this line to your build.gradle file.
 
 ```groovy
-implementation 'com.softnoesis.shakebug:ShakeBug:1.2.4'
+implementation 'com.softnoesis.shakebug:ShakeBug:1.2.18'
 ```
 
 ## Usage
@@ -21,11 +21,11 @@ In your `Application class` or `Launching activity` add this line to your `onCre
 
 **Java**
 ```java
-ShakeBugInitialize(this, "<Your Key>");
+ ShakeBug.sharedInstance().initiateWithKey(this, "<Your Key>");
 ```
 **Kotlin**
 ```kotlin
-ShakeBugInitialize(this,"<Your Key>")
+ ShakeBug.sharedInstance().initiateWithKey(this,"<Your Key>")
 ```
     
 Be sure to replace `<Your Key>` with your application key which given by ShakeBug website.
@@ -37,24 +37,24 @@ Be sure to replace `<Your Key>` with your application key which given by ShakeBu
 
 **Java**
 ```java
-ShakeBug.getInstance().addEventKey(this,"<Key>","<Key Value>"); //pass any key or value
+ShakeBug.sharedInstance().addEventKey(this,"<Key>","<Key Value>"); //pass any key or value
 ```
 
 **Kotlin**
 ```kotlin
-ShakeBug.getInstance().addEventKey(this,"<Key>","<Key Value>") // pass any key or value
+ShakeBug.sharedInstance().addEventKey(this,"<Key>","<Key Value>") // pass any key or value
 ```
    
 2. Add the following for enabling/disabling first time tutorial screen
 
 **Java**
 ```java
-ShakeBug.getInstance().showTutorialScreenFirstTime(true); // Default value True
+ShakeBug.sharedInstance().showTutorialScreenFirstTime(true); // Default value True
 ```
 
 **Kotlin**
 ```kotlin
-ShakeBug.getInstance().showTutorialScreenFirstTime(true) // Default value True
+ShakeBug.sharedInstance().showTutorialScreenFirstTime(true) // Default value True
 ```
 
 ## Usage
