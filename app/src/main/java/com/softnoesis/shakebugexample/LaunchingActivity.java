@@ -4,7 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.softnoesis.shakebuglibrary.ShakeBugInitialize;
+import com.softnoesis.shakebuglibrary.ShakeBug;
+
 
 public class LaunchingActivity extends AppCompatActivity {
 
@@ -12,6 +13,7 @@ public class LaunchingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new ShakeBugInitialize(this,"App_Token");
+        ShakeBug.sharedInstance().initiateWithKey(this, "Your_Key");
+        ShakeBug.sharedInstance().showSplashScreen(true);
     }
 }
