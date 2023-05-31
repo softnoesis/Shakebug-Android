@@ -13,7 +13,7 @@ public class LaunchingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ShakeBug.sharedInstance().initiateWithKey(this, "Your_Key");
-        ShakeBug.sharedInstance().showSplashScreen(true);
+//        Replace with your key from shakebug dashboard in indentifier key section
+        ShakeBug.sharedInstance().initiateWithKey(this,"Shakebug Key");
     }
 }

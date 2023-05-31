@@ -12,7 +12,7 @@ Sign up for a service at https://www.shakebug.com
 Add this line to your build.gradle file.
 
 ```groovy
-implementation 'com.softnoesis.shakebug:ShakeBug:1.2.21'
+implementation 'com.softnoesis.shakebug:ShakeBug:1.2.22'
 ```
 
 ## Usage
@@ -55,6 +55,18 @@ ShakeBug.sharedInstance().showTutorialScreenFirstTime(true); // Default value Tr
 **Kotlin**
 ```kotlin
 ShakeBug.sharedInstance().showTutorialScreenFirstTime(true) // Default value True
+```
+
+3. Add the following to set custom language for shakebug
+
+**Java**
+```java
+ShakeBug.sharedInstance().setShakebugLanguage(ShakebugLanguage.SPANISH,this);
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().setShakebugLanguage(ShakebugLanguage.SPANISH,this)
 ```
 
 ## Usage
