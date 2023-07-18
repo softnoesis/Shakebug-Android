@@ -31,7 +31,7 @@ In your `Application class` or `Launching activity` add this line to your `onCre
 Be sure to replace `<Your Key>` with your application key which given by ShakeBug website.
 
 Then, update the following sdkVersion to your app's `build.gradle` file:
-```
+```gradle
 android {
     compileSdk 33
         defaultConfig {
@@ -45,7 +45,7 @@ android {
 
 You may also need to add the following to your project/build.gradle file:
 
-```
+```gradle
 buildscript {
     repositories {
         mavenCentral()
@@ -56,7 +56,7 @@ buildscript {
 
 For a seamless experience with our SDK, include maven { url 'https://jitpack.io' } in your build.gradle file under allprojects > repositories . Avoid potential issues and enjoy smooth integration.
 
-```
+```gradle
 allprojects {
     repositories {
         google()
