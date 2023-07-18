@@ -12,7 +12,7 @@ Sign up for a service at https://www.shakebug.com
 Add this line to your build.gradle file.
 
 ```groovy
-implementation 'com.softnoesis.shakebug:ShakeBug:1.2.22'
+implementation 'com.softnoesis.shakebug:ShakeBug:1.2.24'
 ```
 
 ## Usage
@@ -30,6 +30,41 @@ In your `Application class` or `Launching activity` add this line to your `onCre
     
 Be sure to replace `<Your Key>` with your application key which given by ShakeBug website.
 
+Then, update the following sdkVersion to your app's `build.gradle` file:
+```gradle
+android {
+    compileSdk 33
+        defaultConfig {
+             ...
+             targetSdk 33
+             ...
+        }
+        ...
+}```
+```
+
+You may also need to add the following to your project/build.gradle file:
+
+```gradle
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+For a seamless experience with our SDK, include maven { url 'https://jitpack.io' } in your build.gradle file under allprojects > repositories . Avoid potential issues and enjoy smooth integration.
+
+```gradle
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
 
 ## Optional Settings
 
@@ -67,6 +102,66 @@ ShakeBug.sharedInstance().setShakebugLanguage(ShakebugLanguage.SPANISH,this);
 **Kotlin**
 ```kotlin
 ShakeBug.sharedInstance().setShakebugLanguage(ShakebugLanguage.SPANISH,this)
+```
+
+4. Add the following to set custom Theme color for shakebug
+
+**Java**
+```java
+ShakeBug.sharedInstance().setShakebugThemeColor(134,235,52);
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().setShakebugThemeColor(134,235,52)
+```
+
+5. Add the following to set custom Screen title for shakebug
+
+**Java**
+```java
+ShakeBug.sharedInstance().changeSDKScreenTitle("Annotate your Bug", "Feedback");
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().changeSDKScreenTitle("Annotate your Bug", "Feedback")
+```
+
+6. Add the following to set custom error message for shakebug
+
+**Java**
+```java
+ShakeBug.sharedInstance().changeSDKErrorAlertMessage("Something wrong...");
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().changeSDKErrorAlertMessage("Something wrong...")
+```
+
+7. Add the following to set custom endpoint for shakebug
+
+**Java**
+```java
+ShakeBug.sharedInstance().setShakebugSDKEndPointURL("","","");
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().setShakebugSDKEndPointURL("","","")
+```
+
+3. Add the following to set trigger shakebug
+
+**Java**
+```java
+ShakeBug.sharedInstance().triggerBugReporting();
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().triggerBugReporting()
 ```
 
 ## Usage
