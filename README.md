@@ -12,7 +12,7 @@ Sign up for a service at https://www.shakebug.com
 Add this line to your build.gradle file.
 
 ```groovy
-implementation 'com.softnoesis.shakebug:ShakeBug:1.2.23'
+implementation 'com.softnoesis.shakebug:ShakeBug:1.2.24'
 ```
 
 ## Usage
@@ -30,6 +30,41 @@ In your `Application class` or `Launching activity` add this line to your `onCre
     
 Be sure to replace `<Your Key>` with your application key which given by ShakeBug website.
 
+Then, update the following sdkVersion to your app's `build.gradle` file:
+```
+android {
+    compileSdk 33
+        defaultConfig {
+             ...
+             targetSdk 33
+             ...
+        }
+        ...
+}```
+```
+
+You may also need to add the following to your project/build.gradle file:
+
+```
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+For a seamless experience with our SDK, include maven { url 'https://jitpack.io' } in your build.gradle file under allprojects > repositories . Avoid potential issues and enjoy smooth integration.
+
+```
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
 
 ## Optional Settings
 
