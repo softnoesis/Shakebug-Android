@@ -164,7 +164,7 @@ ShakeBug.sharedInstance().triggerBugReporting();
 ShakeBug.sharedInstance().triggerBugReporting()
 ```
 
-9. Add the following to set custom sensor to manange shakebug senstivity
+9. Add the following to set custom sensor to manage shakebug sensitivity
 
 **Java**
 ```java
