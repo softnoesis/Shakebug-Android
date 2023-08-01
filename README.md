@@ -12,7 +12,7 @@ Sign up for a service at https://www.shakebug.com
 Add this line to your build.gradle file.
 
 ```groovy
-implementation 'com.softnoesis.shakebug:ShakeBug:1.2.26'
+implementation 'com.softnoesis.shakebug:ShakeBug:1.2.27'
 ```
 
 ## Usage
@@ -162,18 +162,6 @@ ShakeBug.sharedInstance().triggerBugReporting();
 **Kotlin**
 ```kotlin
 ShakeBug.sharedInstance().triggerBugReporting()
-```
-
-9. Add the following to set custom sensor to manage shakebug sensitivity
-
-**Java**
-```java
-ShakeBug.sharedInstance().setShakeSensor();
-```
-
-**Kotlin**
-```kotlin
-ShakeBug.sharedInstance().setShakeSensor()
 ```
 
 ## Usage
