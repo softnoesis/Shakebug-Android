@@ -12,7 +12,7 @@ Sign up for a service at https://www.shakebug.com
 Add this line to your build.gradle file.
 
 ```groovy
-implementation 'com.softnoesis.shakebug:ShakeBug:1.2.28'
+implementation 'com.softnoesis.shakebug:ShakeBug:1.2.29'
 ```
 
 ## Usage
@@ -162,6 +162,29 @@ ShakeBug.sharedInstance().triggerBugReporting();
 **Kotlin**
 ```kotlin
 ShakeBug.sharedInstance().triggerBugReporting()
+```
+
+9. Add the following to allow report bug by shaking mobile
+
+**Java**
+```java
+ShakeBug.sharedInstance().allowToReportBugByShakingMobile(true);
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().allowToReportBugByShakingMobile(true)
+```
+10. Add the following to allow report bug by screenshot capture event
+
+**Java**
+```java
+ShakeBug.sharedInstance().allowToReportBugByScreenCapture(true)
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().allowToReportBugByScreenCapture(true)
 ```
 
 ## Usage
