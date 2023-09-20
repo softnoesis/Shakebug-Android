@@ -7,7 +7,7 @@ Sign up for a service at https://www.shakebug.com
 
 ## Installation
 
-### Gradle
+###  Gradle
 
 Add this line to your build.gradle file.
 
