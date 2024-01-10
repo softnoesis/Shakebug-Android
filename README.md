@@ -12,7 +12,7 @@ Sign up for a service at https://www.shakebug.com
 Add this line to your build.gradle file.
 
 ```groovy
-implementation 'com.softnoesis.shakebug:ShakeBug:1.2.31'
+implementation 'com.softnoesis.shakebug:ShakeBug:1.2.32'
 ```
 
 ## Usage
