@@ -12,7 +12,7 @@ Sign up for a service at https://www.shakebug.com
 Add this line to your build.gradle file. 
 
 ```groovy
-implementation 'com.softnoesis.shakebug:ShakeBug:1.2.37'
+implementation 'com.softnoesis.shakebug:ShakeBug:1.2.38'
 ```
 
 ## Usage
@@ -186,7 +186,17 @@ ShakeBug.sharedInstance().allowToReportBugByScreenCapture(true)
 ```kotlin
 ShakeBug.sharedInstance().allowToReportBugByScreenCapture(true)
 ```
+11. If you want add custom user for accurate sessions use following methods
 
+**Java**
+```java
+ShakeBug.sharedInstance().addCustomUser(id, email, name, etc.); //pass any key or value
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().addCustomUser(id, email, name, etc.) // pass any key or value
+```
 ## Usage
 
 Build & run your app. Once your app is running, shake your device to report a bug! Bug/Crash reports are sent directly to login panel of Shakebug.com and also notify on your registered email address.
