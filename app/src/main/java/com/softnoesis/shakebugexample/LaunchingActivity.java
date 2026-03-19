@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.softnoesis.shakebuglibrary.ShakeBug;
-import com.softnoesis.shakebuglibrary.shakenugCustomUtils.ShakebugLanguage;
-
-
 public class LaunchingActivity extends AppCompatActivity {
 
     @Override
