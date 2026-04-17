@@ -79,8 +79,37 @@ ShakeBug.sharedInstance().addEventKey(this,"<Key>","<Key Value>"); //pass any ke
 ```kotlin
 ShakeBug.sharedInstance().addEventKey(this,"<Key>","<Key Value>") // pass any key or value
 ```
-   
-2. Add the following for enabling/disabling first time tutorial screen
+3. Add the following for fetching remote config values
+
+**Java**
+```java
+ShakeBug.sharedInstance().getRemoteValue("<Config Key>", new ShakeBug.RemoteConfigCallback() {
+    @Override
+    public void onResult(String configKey, String value) {
+        // Handle successful response with config key and value
+    }
+
+    @Override
+    public void onError(String error) {
+        // Handle error
+    }
+});
+```
+
+**Kotlin**
+```kotlin
+ShakeBug.sharedInstance().getRemoteValue("<Config Key>", object : ShakeBug.RemoteConfigCallback {
+    override fun onResult(configKey: String, value: String) {
+        // Handle successful response with config key and value
+    }
+
+    override fun onError(error: String) {
+        // Handle error
+    }
+})
+```
+
+3. Add the following for enabling/disabling first time tutorial screen
 
 **Java**
 ```java
@@ -92,7 +121,7 @@ ShakeBug.sharedInstance().showTutorialScreenFirstTime(true); // Default value Tr
 ShakeBug.sharedInstance().showTutorialScreenFirstTime(true) // Default value True
 ```
 
-3. Add the following to set custom language for shakebug
+4. Add the following to set custom language for shakebug
 
 **Java**
 ```java
@@ -104,7 +133,7 @@ ShakeBug.sharedInstance().setShakebugLanguage(ShakebugLanguage.SPANISH,this);
 ShakeBug.sharedInstance().setShakebugLanguage(ShakebugLanguage.SPANISH,this)
 ```
 
-4. Add the following to set custom Theme color for shakebug
+5. Add the following to set custom Theme color for shakebug
 
 **Java**
 ```java
@@ -116,7 +145,7 @@ ShakeBug.sharedInstance().setShakebugThemeColor(134,235,52);
 ShakeBug.sharedInstance().setShakebugThemeColor(134,235,52)
 ```
 
-5. Add the following to set custom Screen title for shakebug
+6. Add the following to set custom Screen title for shakebug
 
 **Java**
 ```java
@@ -128,7 +157,7 @@ ShakeBug.sharedInstance().changeSDKScreenTitle("Annotate your Bug", "Feedback");
 ShakeBug.sharedInstance().changeSDKScreenTitle("Annotate your Bug", "Feedback")
 ```
 
-6. Add the following to set custom error message for shakebug
+7. Add the following to set custom error message for shakebug
 
 **Java**
 ```java
@@ -140,7 +169,7 @@ ShakeBug.sharedInstance().changeSDKErrorAlertMessage("Something wrong...");
 ShakeBug.sharedInstance().changeSDKErrorAlertMessage("Something wrong...")
 ```
 
-7. Add the following to set custom endpoint for shakebug
+8. Add the following to set custom endpoint for shakebug
 
 **Java**
 ```java
@@ -152,7 +181,7 @@ ShakeBug.sharedInstance().setShakebugSDKEndPointURL("","","");
 ShakeBug.sharedInstance().setShakebugSDKEndPointURL("","","")
 ```
 
-8. Add the following to set trigger shakebug
+9. Add the following to set trigger shakebug
 
 **Java**
 ```java
@@ -164,7 +193,7 @@ ShakeBug.sharedInstance().triggerBugReporting();
 ShakeBug.sharedInstance().triggerBugReporting()
 ```
 
-9. Add the following to allow report bug by shaking mobile
+10. Add the following to allow report bug by shaking mobile
 
 **Java**
 ```java
@@ -175,7 +204,7 @@ ShakeBug.sharedInstance().allowToReportBugByShakingMobile(true);
 ```kotlin
 ShakeBug.sharedInstance().allowToReportBugByShakingMobile(true)
 ```
-10. Add the following to allow report bug by screenshot capture event
+11. Add the following to allow report bug by screenshot capture event
 
 **Java**
 ```java
@@ -186,7 +215,7 @@ ShakeBug.sharedInstance().allowToReportBugByScreenCapture(true)
 ```kotlin
 ShakeBug.sharedInstance().allowToReportBugByScreenCapture(true)
 ```
-11. If you want add custom user for accurate sessions use following methods
+12. If you want add custom user for accurate sessions use following methods
 
 **Java**
 ```java
