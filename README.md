@@ -79,7 +79,7 @@ ShakeBug.sharedInstance().addEventKey(this,"<Key>","<Key Value>"); //pass any ke
 ```kotlin
 ShakeBug.sharedInstance().addEventKey(this,"<Key>","<Key Value>") // pass any key or value
 ```
-3. Add the following for fetching remote config values
+2. Add the following for fetching remote config values
 
 **Java**
 ```java
