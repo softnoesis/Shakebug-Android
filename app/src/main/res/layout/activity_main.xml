@@ -9,7 +9,50 @@
     <ImageView
         android:id="@+id/iv_shake_bug"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/shake_bug_splash_screen" />
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shake_bug_splash_screen"
+        app:layout_constraintBottom_toTopOf="@id/npsExampleContent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/npsExampleContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ShakeBug customer example"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Use the button to preview the NPS survey. In production, use the eligibility-controlled API after a meaningful user action."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Button
+            android:id="@+id/showNpsSurveyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Show NPS survey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="The review popup is automatic: it appears after SDK validation when reviews are enabled for the app in ShakeBug, after the configured launch and cooldown rules."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
