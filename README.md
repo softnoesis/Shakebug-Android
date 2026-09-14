@@ -21,8 +21,8 @@ Sign up at [shakebug.com](https://www.shakebug.com).
 ## Compatibility
 
 - Minimum Android SDK: 21
-- Compile SDK: 33
-- Target SDK: 33
+- Compile SDK: 36
+- Target SDK: 36
 
 ## Installation
 
@@ -42,7 +42,7 @@ Then add ShakeBug to your app module's `build.gradle` file:
 
 ```groovy
 dependencies {
-    implementation 'com.softnoesis.shakebug:ShakeBug:1.2.50'
+    implementation 'com.softnoesis.shakebug:ShakeBug:1.2.51'
 }
 ```
 
@@ -50,11 +50,11 @@ Configure compatible SDK versions in the app module:
 
 ```groovy
 android {
-    compileSdk 33
+    compileSdk 36
 
     defaultConfig {
         minSdk 21
-        targetSdk 33
+        targetSdk 36
     }
 }
 ```
