@@ -3,8 +3,10 @@ package com.softnoesis.shakebugexample;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.softnoesis.shakebuglibrary.ShakeBug;
+
 public class LaunchingActivity extends AppCompatActivity {
 
     @Override
@@ -13,5 +15,12 @@ public class LaunchingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 //        Replace with your key from shakebug dashboard in indentifier key section
         ShakeBug.sharedInstance().initiateWithKey(this,"Shakebug Key");
+
+        Button showNpsSurveyButton = findViewById(R.id.showNpsSurveyButton);
+        showNpsSurveyButton.setOnClickListener(view ->
+                // `true` is useful for an explicit in-app "Rate us" action.
+                // Use showNPSSurvey() in production to respect eligibility rules.
+                ShakeBug.sharedInstance().showNPSSurvey(true)
+        );
     }
 }
