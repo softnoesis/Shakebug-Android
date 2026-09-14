@@ -14,7 +14,7 @@ public class LaunchingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        Replace with your key from shakebug dashboard in indentifier key section
-        ShakeBug.sharedInstance().initiateWithKey(this,"Shakebug Key");
+        ShakeBug.sharedInstance().initiateWithKey(this,"ShakeBug Key");
 
         Button showNpsSurveyButton = findViewById(R.id.showNpsSurveyButton);
         showNpsSurveyButton.setOnClickListener(view ->
