@@ -1,58 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F9FB"
+    android:fillViewport="true"
     tools:context=".LaunchingActivity">
 
-    <ImageView
-        android:id="@+id/iv_shake_bug"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:contentDescription="@null"
-        android:scaleType="centerCrop"
-        android:src="@drawable/shake_bug_splash_screen"
-        app:layout_constraintBottom_toTopOf="@id/npsExampleContent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
-        android:id="@+id/npsExampleContent"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
+        android:gravity="center"
         android:orientation="vertical"
-        android:padding="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="32dp">
 
+        <!-- Trigger Bug Report Button -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ShakeBug customer example"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Use the button to preview the NPS survey. In production, use the eligibility-controlled API after a meaningful user action."
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-        <Button
-            android:id="@+id/showNpsSurveyButton"
+            android:id="@+id/btnTriggerBugReport"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Show NPS survey" />
+            android:layout_height="52dp"
+            android:background="@drawable/app_btn_teal"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Trigger Bug Report 🐛"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
+        <!-- Show NPS Survey Button -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="The review popup is automatic: it appears after SDK validation when reviews are enabled for the app in ShakeBug, after the configured launch and cooldown rules."
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-    </LinearLayout>
+            android:id="@+id/btnShowNps"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/app_btn_orange"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Show NPS Survey"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Open Shake Switch Row -->
+        <LinearLayout
+            android:id="@+id/layoutOpenShake"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/app_switch_row_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Open Shake 📳"
+                android:textColor="#20242A"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchOpenShake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+        </LinearLayout>
+
+        <!-- Hit Event Button -->
+        <TextView
+            android:id="@+id/btnHitEvent"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/app_btn_blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Hit Event"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Add Custom User Button -->
+        <TextView
+            android:id="@+id/btnAddCustomUser"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/app_btn_dark"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Add Custom User"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Crash Button -->
+        <TextView
+            android:id="@+id/btnCrash"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:text="Crash"
+            android:textColor="#D32F2F"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

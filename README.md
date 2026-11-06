@@ -42,7 +42,7 @@ Then add ShakeBug to your app module's `build.gradle` file:
 
 ```groovy
 dependencies {
-    implementation 'com.softnoesis.shakebug:ShakeBug:1.2.51'
+    implementation 'com.softnoesis.shakebug:ShakeBug:1.2.52'
 }
 ```
 
