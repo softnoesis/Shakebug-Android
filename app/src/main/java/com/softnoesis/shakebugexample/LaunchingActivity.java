@@ -20,7 +20,7 @@ public class LaunchingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Replace with your key from shakebug dashboard in identifier key section
-        ShakeBug.sharedInstance().initiateWithKey(this, "2LhP2d6MP31QMRTjS1aYmQUmEiy35K");
+        ShakeBug.sharedInstance().initiateWithKey(this, "Your Key");
         ShakeBug.sharedInstance().showSplashScreen(true);
         ShakeBug.sharedInstance().allowToReportBugByShakingMobile(true);
 
